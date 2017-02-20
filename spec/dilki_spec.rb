@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Dilki::YandexApiTranslate do
- let(:api_key) { 'trnsl.1.1.20170201T165242Z.1fcac397f9d0a37e.0a8ce6a2d65e461173e5b8f9be1c395471e1a3d1' }
+ let(:api_key) { '' }
 
  subject(:YandexApiTranslate) { Dilki::YandexApiTranslate.new(api_key) }
 
