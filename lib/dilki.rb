@@ -10,17 +10,18 @@ class YandexApiTranslate
     end
 
     def get_langs
-     data = Methods::GetLangs.run(api_key)
+     data = ::Methods::GetLangs.run(api_key)
      data['dirs']
     end
 
+
     def detect(text)
-     data = Methods::DetectLangs.run(api_key, text)
+     data = ::Methods::DetectLangs.run(api_key, text)
      data['lang']
     end
 
     def translate(text, from="en", to = "ru")
-     data = Methods::Translate.run(api_key, text, from, to)
+     data = ::Methods::Translate.run(api_key, text, from, to)
      data['text']
     end
 
