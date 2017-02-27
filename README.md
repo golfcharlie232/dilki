@@ -22,28 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-<<<<<<< Updated upstream
 Translate text with yandex translate api service
 =======
 First, create translator using your api key:
 
-  translator = Dilki::YandexApiTranslate.new('your.key')
+  translator = Dilki::YaClient.new('your.key')
 
 To get list of possible translation directions use #langs method:
 
-  YandexApiTranslate.langs
+  YaClient.langs
 
 To determine language text use detect method:
 
-  YandexApiTranslate.detect 'First trabslate'
+  YaClient.detect 'First trabslate'
 
 To translate text use translate method:
 
-  YandexApiTranslate.translate 'First', from: 'ru'
+  YaClient.translate 'First', from: 'ru'
 
 In this case Yandex automatically detect text language. If you want to set text language manually add third parameter
 
-  YandexApiTranslate.translate 'Car', from: 'ru', to: 'en'
+  YaClient.translate 'Car', from: 'ru', to: 'en'
 >>>>>>> Stashed changes
 
 ## Development
