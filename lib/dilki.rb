@@ -1,9 +1,9 @@
-require './dilki/version.rb'
-require './configuration.rb'
-require './api.rb'
-require './methods/detect.rb'
-require './methods/get_langs.rb'
-require './methods/translate.rb'
+require 'dilki/version.rb'
+require 'configuration.rb'
+require 'api.rb'
+require 'methods/detect.rb'
+require 'methods/get_langs.rb'
+require 'methods/translate.rb'
 
 module Dilki
 class Client < Configuration

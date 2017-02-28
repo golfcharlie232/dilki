@@ -1,4 +1,4 @@
-require './error'
+require 'error'
 require "http"
 
 class Api
