@@ -17,7 +17,7 @@ module Dilki
     attr_accessor :api_key
 
     def initialize
-      @api_key = "trnsl.1.1.20170201T165242Z.1fcac397f9d0a37e.0a8ce6a2d65e461173e5b8f9be1c395471e1a3d1"      
+      @api_key = ""      
     end
   end
 end
