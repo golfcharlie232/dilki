@@ -26,24 +26,23 @@ Translate text with yandex translate api service
 =======
 First, create translator using your api key:
 
-  translator = Dilki::YaClient.new('your.key')
+  Dilki::Client.new('your api key')
 
 To get list of possible translation directions use #langs method:
 
-  YaClient.langs
+  Clientlangs
 
 To determine language text use detect method:
 
-  YaClient.detect 'First trabslate'
+  Client.detect("text")
 
 To translate text use translate method:
 
-  YaClient.translate 'First', from: 'ru'
+  Client.translate 'First', from: 'ru'
 
 In this case Yandex automatically detect text language. If you want to set text language manually add third parameter
 
-  YaClient.translate 'Car', from: 'ru', to: 'en'
->>>>>>> Stashed changes
+  Client.translate 'Text to translate', from: 'ru', to: 'en'
 
 ## Development
 
@@ -59,5 +58,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/golfch
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-# dilki

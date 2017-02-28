@@ -1,24 +1,21 @@
-require "dilki/version"
-require 'api'
-require "methods/detect.rb"
-require "methods/get_langs.rb"
-require "methods/translate.rb"
+require './dilki/version.rb'
+require './configuration.rb'
+require './api.rb'
+require './methods/detect.rb'
+require './methods/get_langs.rb'
+require './methods/translate.rb'
 
 module Dilki
-class YaClient
-
-  def initialize(api_key)
-   @api_key = api_key
-   end
+class Client < Configuration
 
   def get_langs
    data = ::Methods::GetLangs.run(api_key)
-   data['dirs'].first
+   data['dirs']
   end
 
   def detect(text)
    data = ::Methods::DetectLangs.run(api_key, text)
-   data['lang']first
+   data['lang']
   end
 
   def translate(text, from="en", to = "ru")
